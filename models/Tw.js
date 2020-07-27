@@ -1,11 +1,15 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const TwSchema = new mongoose.Schema({
-    message:{
-        type:String,
+    _id: mongoose.Schema.Types.ObjectId,
+    message: {
+        type: String,
         required: true
     },
-    createdAt:{
-        
-}
-})
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+});
+
+module.exports = mongoose.model('Tw', TwSchema);

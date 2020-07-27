@@ -1,13 +1,17 @@
 require('dotenv').config();
-const path = require('path')
+const path = require('path');
 
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
+const mongoose = require('mongoose');
 
 const twsRouter = require('./routes/web/tws');
 const twsApiRouter = require('./routes/api/tws');
+
+const connectDB = require('./middelwares/db');
+connectDB.connect();
 
 const app = express();
 
@@ -36,10 +40,8 @@ app.use((req, res, next) => {
     next(error);
 });
 
-// app.listen(process.env.PORT, function() {
-//     console.log('Server running localhost:' + process.env.PORT);
-// });
+app.listen(process.env.PORT, function() {
+    console.log('Server running on localhost:' + process.env.PORT);
+});
 
-app.listen(5500,function(){
-    console.log('Server running localhost: 5500');
-})
+connectDB.close();
