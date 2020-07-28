@@ -1,7 +1,42 @@
-<h1>List of Twitters</h1>
+<nav class="navbar tweet-theme">
+  <div class="container">
+    <span class="navbar-brand">
+      <h3>twitter</h3>
+    </span>
+  </div>
+</nav>
+<div class="container">
+  <span class="your_tweets">
+    <h3>Your tweets</h3>
+  </span>
+  <div class="form container_form">
+    <form class="form-elements">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">type & post a tweet</span>
+        </div>
+        <textarea class="form-control"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary tweet-btn">tweet</button>
+    </form>
 
-<ul>
+
+  </div>
+
+<ul></ul>
   {{#each tws}}
-    <li>{{{this.message}}}</li>
+  <li>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <p class="card-text">{{{this.message}}}</p>
+      <h6 class="card-subtitle text-muted">tweet time</h6>
+    </div>
+
+  </div>
+  </li>
   {{/each}}
 </ul>
+  
+</div>
+
+

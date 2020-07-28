@@ -1,0 +1,29 @@
+.tweet-theme{
+    background-color: rgb(72, 159, 230);
+    color:whitesmoke;
+}
+.container_form{
+    margin-top: 1rem;
+    background-color: rgb(238, 235, 235);
+    border: 1px solid rgb(10, 10, 10);
+}
+.form{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.your_tweets{
+    margin: 1rem;
+    color: rgb(5, 37, 78);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+}
+.form-elements{
+    margin: 10px 10px 10px 10px;
+}
+.tweet-btn{
+    margin-top:1rem;
+}
+.card-subtitle {
+    font-size: 0.7rem;
+}
