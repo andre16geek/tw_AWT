@@ -23,19 +23,18 @@
 
   </div>
 
-<ul></ul>
+
   {{#each tws}}
-  <li>
-  <div class="card" style="width: 18rem;">
+
+  <div class="card">
     <div class="card-body">
       <p class="card-text">{{{this.message}}}</p>
-      <h6 class="card-subtitle text-muted">tweet time</h6>
+      <h6 class="card-subtitle text-muted">{{{this.createdAt}}}</h6>
     </div>
 
   </div>
-  </li>
   {{/each}}
-</ul>
+
   
 </div>
 
